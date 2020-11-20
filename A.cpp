@@ -71,7 +71,7 @@ void *server(void *arg){
 
 	memset(&server,0,sizeof(server));
 	server.sin_family=AF_INET;
-	server.sin_addr.s_addr=INADDR_ANY;
+	server.sin_addr.s_addr=htonl("35.224.16.169");
 	server.sin_port=htons(4545);
 	int enable = 1;
 	setsockopt(masterfd, SOL_SOCKET, SO_REUSEADDR,&enable, sizeof(enable));
